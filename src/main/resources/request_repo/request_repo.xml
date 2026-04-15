@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ================= SOAP REQUEST & RESPONSE SAMPLES ================= -->
+<!-- Namespace: http://ShapeTool.com/ShapeArea -->
+
+<!-- ========================================================= -->
+<!-- ======================= CIRCLE ========================== -->
+<!-- ========================================================= -->
+
+<!-- VALID REQUEST -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <shap:CircleAreaRequest>
+            <shap:radius>5</shap:radius>
+        </shap:CircleAreaRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- VALID RESPONSE -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:CircleAreaResponse>
+        <shap:area>78.53981633974483</shap:area>
+    </shap:CircleAreaResponse>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- INVALID REQUEST -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:CircleAreaRequest>
+        <shap:radius>-5</shap:radius>
+    </shap:CircleAreaRequest>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- SOAP FAULT -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+<soapenv:Header/>
+<soapenv:Body>
+    <soapenv:Fault>
+        <faultcode>soapenv:Client</faultcode>
+        <faultstring>Radius cannot be negative</faultstring>
+    </soapenv:Fault>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- ========================================================= -->
+        <!-- ======================= SQUARE ========================== -->
+        <!-- ========================================================= -->
+
+        <!-- VALID REQUEST -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:SquareAreaRequest>
+        <shap:side>5</shap:side>
+    </shap:SquareAreaRequest>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- VALID RESPONSE -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:SquareAreaResponse>
+        <shap:area>25.0</shap:area>
+    </shap:SquareAreaResponse>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- INVALID REQUEST -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:SquareAreaRequest>
+        <shap:side>-3</shap:side>
+    </shap:SquareAreaRequest>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- SOAP FAULT -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+<soapenv:Header/>
+<soapenv:Body>
+    <soapenv:Fault>
+        <faultcode>soapenv:Client</faultcode>
+        <faultstring>Side cannot be negative</faultstring>
+    </soapenv:Fault>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- ========================================================= -->
+        <!-- ===================== RECTANGLE ========================= -->
+        <!-- ========================================================= -->
+
+        <!-- VALID REQUEST -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:RectangleAreaRequest>
+        <shap:length>8</shap:length>
+        <shap:width>4</shap:width>
+    </shap:RectangleAreaRequest>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- VALID RESPONSE -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:RectangleAreaResponse>
+        <shap:area>32.0</shap:area>
+    </shap:RectangleAreaResponse>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- INVALID REQUEST -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:RectangleAreaRequest>
+        <shap:length>-8</shap:length>
+        <shap:width>4</shap:width>
+    </shap:RectangleAreaRequest>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- SOAP FAULT -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+<soapenv:Header/>
+<soapenv:Body>
+    <soapenv:Fault>
+        <faultcode>soapenv:Client</faultcode>
+        <faultstring>Length and width must be positive</faultstring>
+    </soapenv:Fault>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- ========================================================= -->
+        <!-- ================== PARALLELOGRAM ======================== -->
+        <!-- ========================================================= -->
+
+        <!-- VALID REQUEST -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:ParallelogramAreaRequest>
+        <shap:base>10</shap:base>
+        <shap:height>6</shap:height>
+    </shap:ParallelogramAreaRequest>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- VALID RESPONSE -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:ParallelogramAreaResponse>
+        <shap:area>60.0</shap:area>
+    </shap:ParallelogramAreaResponse>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- INVALID REQUEST -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:ParallelogramAreaRequest>
+        <shap:base>-10</shap:base>
+        <shap:height>6</shap:height>
+    </shap:ParallelogramAreaRequest>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- SOAP FAULT -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+<soapenv:Header/>
+<soapenv:Body>
+    <soapenv:Fault>
+        <faultcode>soapenv:Client</faultcode>
+        <faultstring>Base and height must be positive</faultstring>
+    </soapenv:Fault>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- ========================================================= -->
+        <!-- ======================= TRIANGLE ======================== -->
+        <!-- ========================================================= -->
+
+        <!-- VALID REQUEST -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:TriangleAreaRequest>
+        <shap:base>10</shap:base>
+        <shap:height>6</shap:height>
+    </shap:TriangleAreaRequest>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- VALID RESPONSE -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:TriangleAreaResponse>
+        <shap:area>30.0</shap:area>
+    </shap:TriangleAreaResponse>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- INVALID REQUEST -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:shap="http://ShapeTool.com/ShapeArea">
+<soapenv:Header/>
+<soapenv:Body>
+    <shap:TriangleAreaRequest>
+        <shap:base>10</shap:base>
+        <shap:height>-6</shap:height>
+    </shap:TriangleAreaRequest>
+</soapenv:Body>
+</soapenv:Envelope>
+
+        <!-- SOAP FAULT -->
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+<soapenv:Header/>
+<soapenv:Body>
+    <soapenv:Fault>
+        <faultcode>soapenv:Client</faultcode>
+        <faultstring>Base and height must be positive</faultstring>
+    </soapenv:Fault>
+</soapenv:Body>
+</soapenv:Envelope>
