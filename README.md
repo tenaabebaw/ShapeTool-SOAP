@@ -1,11 +1,7 @@
 Here is your **fully combined, clean, submission-ready README.md** with installation steps, Git guide, project overview, SOAP details, and everything merged properly.
 
----
 
-```md
 # ShapeTool SOAP Web Service
-
----
 
 ##  Project Overview
 
@@ -30,32 +26,8 @@ The project follows a **contract-first approach**, where the XML Schema (XSD) is
 - SOAP
 - Maven
 
----
 
 ##  Project Structure
-
-```
-
-ShapeArea/
-│── src/
-│── src/main/java/
-│   ├── config/
-│   ├── endpoint/
-|   ├──InvalidInputException/InvalidInputException.java
-│   ├── service/
-│   └── ShapeAreaApplication.java
-│
-│── src/main/resources/
-│   ├── request_repo/request_repo.xml
-│   ├── shapearea.xsd
-│   └── application.properties
-│
-│── pom.xml
-│── README.md
-
-```
-
----
 
 ##  XSD Design (Schema Structure)
 
@@ -74,8 +46,6 @@ The WSDL file is generated automatically from the XSD and defines:
 - Input/output messages
 - Endpoint location
 
-````
-
 ### Operations:
 - circleArea
 - squareArea
@@ -83,11 +53,9 @@ The WSDL file is generated automatically from the XSD and defines:
 - triangleArea
 - parallelogramArea
 
----
+## Service Implementation Example
 
-## ⚙️ Service Implementation Example
-
-```java
+java
 @PayloadRoot(namespace = NAMESPACE, localPart = "circleAreaRequest")
 @ResponsePayload
 public CircleAreaResponse circle(@RequestPayload CircleAreaRequest request) {
@@ -95,9 +63,7 @@ public CircleAreaResponse circle(@RequestPayload CircleAreaRequest request) {
     response.setArea(service.circle(request.getRadius()));
     return response;
 }
-````
 
----
 
 ##  Area Formulas Used
 
@@ -117,25 +83,18 @@ public CircleAreaResponse circle(@RequestPayload CircleAreaRequest request) {
 
 Example:
 
-```java
+java
 if (radius < 0) {
     throw new RuntimeException("Radius cannot be negative");
 }
-```
 
----
 
 ##  SOAP Fault Handling
 
 Invalid inputs return SOAP Fault responses.
 
 Example:
-
-```
 Radius cannot be negative
-```
-
----
 
 ##  Testing
 
@@ -144,22 +103,16 @@ Tested using:
 * SoapUI
 
 ### Sample Request:
-
-```xml
 <circleAreaRequest xmlns="http://ShapeTool.com/ShapeArea">
     <radius>5</radius>
 </circleAreaRequest>
-```
 
 ### Sample Response:
 
-```xml
 <circleAreaResponse>
     <area>78.54</area>
 </circleAreaResponse>
-```
 
----
 
 ## How to Run the Project
 
@@ -173,8 +126,6 @@ Run the installer:
 * Click Next through setup (default settings are fine)
 * Click Install and finish
 
----
-
 ### 2. Verify Installation
 
 Press:
@@ -184,40 +135,30 @@ Press:
 * Press Enter
 
 Run:
-
-```bash
+bash
 git --version
-```
+
 
 If installed correctly, it shows Git version.
-
----
 
 ### 3. Clone the Repository
 
 Go to the folder where you want the project:
 
-```bash
+bash
 git clone https://github.com/tenaabebaw/ShapeTool-SOAP.git
-```
 
-Git will download the project files.
-
----
+Git will download the project files
 
 ### 4. Run the Project
 
 Navigate into project:
-
-```bash
+bash
 cd ShapeArea
-```
 
 Run application:
-
-```bash
+bash
 mvn spring-boot:run
-```
 
 ### 5. Access WSDL
 
@@ -235,12 +176,14 @@ This project demonstrates:
 * SOAP request/response handling
 * Validation and fault handling
 
----
 
 ##  Author
 
 Student Name: Tiena Abebaw
+
 Course: Web Services
+
 University: Woldia University
+
 Year: 5th Year Software Engineering (2026)
 
