@@ -1,5 +1,3 @@
-Here is your **fully combined, clean, submission-ready README.md** with installation steps, Git guide, project overview, SOAP details, and everything merged properly.
-
 
 # ShapeTool SOAP Web Service
 
@@ -13,7 +11,7 @@ ShapeTool is a SOAP-based web service developed using Spring Boot. The purpose o
 - Triangle  
 - Parallelogram  
 
-The project follows a **contract-first approach**, where the XML Schema (XSD) is designed before implementing the service logic.
+The project follows a "contract-first approach", where the XML Schema (XSD) is designed before implementing the service logic.
 
 ---
 
